@@ -1,0 +1,66 @@
+<!--
+name: Ryan Gutierrez
+github: gutzq
+email: ryan_gutierrez@uml.student.edu
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dynamic Multiplication Table</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+</head>
+<body>
+
+<h1>Multiplication Table Generator</h1>
+<div class="wrap">
+  <p>Welcome! Input the parameters below to create any multiplication table you want!</p>
+  <p id="requirements">The form only accepts integers from -50 to 50. All fields are required for table generation.</p>
+  
+  <form id="tableform">
+    <fieldset>
+      <legend>Multiplier Range</legend>
+      <label for="startMultiplier">Minimum</label>
+      <input type="number" id="startMultiplier" name="minimum-multiplier" min="-50" max="50" required>
+      <div id="startMultiplierSlider"></div>
+      
+      <label for="endMultiplier">Maximum</label>
+      <input type="number" id="endMultiplier" name="maximum-multiplier" min="-50" max="50" required>
+      <div id="endMultiplierSlider"></div>
+      
+      <span id="multiplier-error"></span>
+    </fieldset>
+    
+    <fieldset>
+      <legend>Multiplicand Range</legend>
+      <label for="startMultiplicand">Minimum</label>
+      <input type="number" id="startMultiplicand" name="minimum-multiplicand" min="-50" max="50" required>
+      <div id="startMultiplicandSlider"></div>
+      
+      <label for="endMultiplicand">Maximum</label>
+      <input type="number" id="endMultiplicand" name="maximum-multiplicand" min="-50" max="50" required>
+      <div id="endMultiplicandSlider"></div>
+      
+      <span id="multiplicand-error"></span>
+    </fieldset>
+    
+    <input type="button" value="Generate your table">
+  </form>
+  
+  <div id="tabs">
+    <ul class="ui-tabs-nav"></ul>
+  </div>
+  
+  <div id="tableContainer">
+  </div>
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.5/jquery.validate.min.js"></script>
+<script src="https://code.jquery.com/ui/1.13.2/jquery-ui.min.js"></script>
+<script src="js/table.js"></script>
+</body>
+</html>
